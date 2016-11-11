@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<style>
+			/* 
+				*{border:1px solid red;height:20px}    *选中所有标签
+				所有的html5的结构标签本质上来说就是一个个div标签，只不过是由意义的 
+			*/
+			
+			/*页面头部*/
+			header{height:150px;background:#ABCDEF}
+			nav{height:30px;background:#FF9900;margin-top:100px}
+			nav ul li{width:100px;height:30px;float:left;line-height:30px}
+			
+			
+			/*头部中间部分 div : section + aside   如果div未设置高度，则martin-top属性看不出效果*/
+			div{margin-top:10px;height:1000px}
+			section{height:1000px;background:#ABCDEF;width:70%;float:left}
+			article{background:#FF9900;width:500px;margin:0 auto;text-align:center;line-height:40px} /* margin:0 auto 表示文字自动居中对齐 */
+			aside{height:1000px;background:#ABCDEF;width:28%;float:right}
+			
+			
+			/*页面底部*/
+			footer{height:100px;background:#ABCDEF;clear:both;margin-top:10px}
+			/*至此如果不清楚float，是看不到底部的，因为上面的div部分有float属性，所以应该先清除*/
+		</style>
+	</head>
+	<body>
+		<header>
+			<p>this is header part</p>
+			<nav>
+				<ul>
+					<li>首页</li>
+					<li>起夜</li>
+					<li>论坛</li>
+					<li>商城</li>
+					<li>社区</li>
+					<li>我累个去</li>
+				</ul>
+			</nav>
+		</header>
+		<div>
+			<section>
+				<article>
+					<h2>春晓</h2>
+					<p>
+						春眠不觉晓,<br/>
+						处处闻啼鸟;<br/>
+						夜来风雨声,<br/>
+						花落知道少.<br/>
+					</p>
+				</article>
+				<hr/>
+				<article>
+					<h2>春晓</h2>
+					<p>
+						春眠不觉晓,<br/>
+						处处闻啼鸟;<br/>
+						夜来风雨声,<br/>
+						花落知道少.<br/>
+					</p>
+				</article>
+				<hr />
+				<figure>
+					<figcaption>UFO</figcaption>
+					<p>不明飞行物</p>
+				</figure>
+				<figure>
+					<dt>DDS</dt>
+					<dd>大屌丝</dd>
+				</figure>
+				<hr />
+				<dialog>
+					<dt>唐僧：悟空你又调皮了</dt>
+					<dd>悟空:...(看着)</dd>
+					<dt>唐僧：乱扔是不对的，砸到小朋友怎么办？</dt>
+					<dd>悟空:...(纠结)</dd>
+					<dt>唐僧：悟空想要吗，想要就告诉我啊</dt>
+					<dd>悟空:ciao（一棍子抡上去）</dd>
+				</dialog>
+				<hr />
+				<menu>
+					<li>点击</li>
+					<li>右键点击</li>
+				</menu>
+				<hr />
+				<span contextmenu="candan">右键单击我试试</span>
+				<menu type="context" id="candan">
+					<menuitem label="菜单1" onclick="alert(1)" icon="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo/bd_logo1_31bdc765.png"></menuitem>
+				</menu>
+				<hr/>
+				<meter min="0" max="10" value="7" low="3" high="7"></meter>
+				<progress max="100" value="0" id="pro"></progress>
+				<script>
+					var pro = document.getElementById("pro");
+					setInterval(function(){pro.value += 1 ;},100);
+				</script>
+				
+				<hr/>
+				<details>
+					<dt>你瞅啥</dt>
+					<dd>瞅你咋地</dd>
+					<dt>你瞅啥</dt>
+					<dd>瞅你咋地</dd>
+				</details>
+				<hr/>
+
+				<ruby>夼<rp>(</rp><rt>kuang</rt><rp>)</rp></ruby>
+				<hr/>
+				女人最<mark>喜欢的事</mark>是逛街。。吃零食。。。逛街。。。吃零食。。偶尔还会呜呜呜的哭
+			</section>
+			<aside>
+				<hgroup> 
+					<h3>女生宿舍为何频频被盗!?</h3>
+					<h3>两百头母猪为何半夜惨死！</h3>
+					<h3>是人性的扭曲，还是道德的沦丧！</h3>
+				</hgroup>
+			</aside>
+		</div>
+		<footer>
+			<p>this is footer part</p>
+			<hr />
+			<small>法律条文</small>
+			<small>联系我们</small>
+			<small>客户意见</small>
+			<small>商户合作</small>
+		</footer>
+	
+	</body>
+
+
+</html>
