@@ -1,0 +1,34 @@
+
+Html5 音视频 
+	
+	早期： <embed> + <Object> + 文件 
+	       不是所有浏览器都支持，且embed不是标准
+	现状：
+		Realplay 、windows media、Quick Time、Flash
+
+
+	视频有很多格式，其组成部分：画面、音频、编码格式。
+	H5视频编码格式：H.264、Theora(免费)、VP8(google开源)
+	
+	H5常见音频编码格式：aac、mp3、vorbis(免费)
+	
+	H5支持的视频格式：
+		Ogg = Theora视频编码 + vorbis音频编码
+		MPEG4 = H.264视频编码 + AAC音频
+		WebM = VP8 + vorbis
+		
+H5的视频标签：<video>
+	<video src="文件地址" controls="controls"></video>
+	<video src="文件地址" controls="controls">浏览器不支持video标签播放视频</video>
+	<video controls="controls">
+		<source src="move.ogg" type="video/ogg"/>
+		<source src="move.mp4" type="video/mp4"/>
+		浏览器不支持video标签播放视频
+	</video>
+Video API方法 ：方便js操作。
+
+音频 ： <audio>
+
+画布——canvas，主要靠js驱动
+
+
