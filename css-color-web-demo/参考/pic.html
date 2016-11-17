@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+	<head>
+		<style>
+			*{margin:0;padding:0}
+			#all{position:relative}
+			#all #bg{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0.7; background:#000;display:none}
+			#pic{position:absolute;top:100px;left:100px;display:none}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<img src="brother.png" onclick="show(this)" >
+			<div id="bg"></div>
+			<div id="pic" >
+				<img src="under.jpg" onclick="noshow(this)">
+			</div>
+		</div>
+		<script>
+		function show(){
+			var bg=document.getElementById('bg');
+			var pic=document.getElementById('pic');
+			bg.style.display="block";
+			pic.style.display="block";
+			}
+		function noshow(){
+			var bg=document.getElementById('bg');
+			var pic=document.getElementById('pic');
+			bg.style.display="none";
+			pic.style.display="none";
+			}
+		</script>
+		
+	</body>
+</html>

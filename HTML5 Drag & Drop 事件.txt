@@ -1,0 +1,18 @@
+//要想实现拖拽，首页需要阻止浏览器默认行为，一共四个事件。
+$(document).on({
+	dragleave:function(e){	//拖离
+e.preventDefault();
+$('.dashboard_target_box').removeClass('over');
+	},
+	drop:function(e){		//拖后放
+e.preventDefault();
+	},
+	dragenter:function(e){	//拖进
+e.preventDefault();
+$('.dashboard_target_box').addClass('over');
+	},
+	dragover:function(e){	//拖来拖去
+e.preventDefault();
+$('.dashboard_target_box').addClass('over');
+	}
+});
